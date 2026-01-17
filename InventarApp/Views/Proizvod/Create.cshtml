@@ -1,0 +1,59 @@
+@model InventarApp.Models.Proizvod
+
+@{
+    ViewData["Title"] = "Dodaj Novi Proizvod";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h2 class="mb-0">
+                        <i class="bi bi-plus-circle"></i> Dodaj Novi Proizvod
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                        
+                        <div class="mb-3">
+                            <label asp-for="Naziv" class="form-label fw-bold"></label>
+                            <input asp-for="Naziv" class="form-control form-control-lg" placeholder="Unesite naziv proizvoda" autofocus />
+                            <span asp-validation-for="Naziv" class="text-danger small"></span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label asp-for="Cijena" class="form-label fw-bold"></label>
+                            <div class="input-group">
+                                <input asp-for="Cijena" class="form-control form-control-lg" placeholder="0.00" step="0.01" />
+                                <span class="input-group-text">€</span>
+                            </div>
+                            <span asp-validation-for="Cijena" class="text-danger small"></span>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label asp-for="Kolicina" class="form-label fw-bold"></label>
+                            <input asp-for="Kolicina" class="form-control form-control-lg" placeholder="0" />
+                            <span asp-validation-for="Kolicina" class="text-danger small"></span>
+                        </div>
+                        
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-between">
+                            <a asp-action="Index" class="btn btn-secondary btn-lg">
+                                <i class="bi bi-arrow-left"></i> Natrag na Listu
+                            </a>
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <i class="bi bi-check-circle"></i> Dodaj Proizvod
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+}

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<InventarApp.Models.Proizvod>
+
+<a asp-action="Create" class="btn btn-primary">Dodaj novi proizvod</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th>Ukupna Vrijednost</th>
+            <th>Akcije</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Naziv</td>
+                <td>@item.IzracunajUkupnuVrijednost() €</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Uredi</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Sigurno?')">Obriši</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
