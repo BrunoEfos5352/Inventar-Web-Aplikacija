@@ -8,17 +8,16 @@ Inventar Web Aplikacija je jednostavna web aplikacija razvijena u ASP.NET Core 8
 
 - **Pregled proizvoda**: Prikazuje listu svih proizvoda u inventaru
 - **Dodavanje proizvoda**: Omogu?ava dodavanje novih proizvoda s nazivom, cijenom i koli?inom
-- **Ure?ivanje proizvoda**: Omogu?ava izmjenu postoje?ih proizvoda
-- **Brisanje proizvoda**: Omogu?ava uklanjanje proizvoda iz inventara
+- **Ure?ivanje proizvoda**: Omogu?ava izmjenu postojećih proizvoda
+- **Brisanje proizvoda**: Omogućava uklanjanje proizvoda iz inventara
 - **Validacija podataka**: Uklju?uje validaciju unosa za sve podatke o proizvodu
-- **Izra?un vrijednosti**: Automatski izra?unava ukupnu vrijednost proizvoda (cijena � koli?ina)
+- **Izračun vrijednosti**: Automatski izra?unava ukupnu vrijednost proizvoda (cijena × količina)
 
 ## Tehnologije
 
 - **.NET 8.0**: Najnovija verzija .NET platforme
 - **ASP.NET Core MVC**: Framework za izradu web aplikacija
 - **C#**: Programski jezik
-- **Razor Views**: Templating engine za prikaz stranica
 
 ## Struktura projekta
 
@@ -36,22 +35,22 @@ InventarApp/
 
 ## Model proizvoda
 
-Svaki proizvod sadr�i:
+Svaki proizvod sadrži:
 - **Id**: Jedinstveni identifikator
 - **Naziv**: Naziv proizvoda (max 100 znakova)
-- **Cijena**: Cijena u eurima (�) (0.01 - 1,000,000)
-- **Koli?ina**: Dostupna koli?ina (0 - 100,000)
+- **Cijena**: Cijena u eurima (€) (0.01 - 1,000,000)
+- **Količina**: Dostupna koli?ina (0 - 100,000)
 
 ## Pokretanje aplikacije
 
 1. Klonirajte repozitorij
 2. Otvorite projekt u Visual Studio 2022 ili novijoj verziji
 3. Pritisnite F5 ili pokrenite projekt
-4. Aplikacija ?e se pokrenuti u browseru
+4. Aplikacija će se pokrenuti u browseru
 
 ## Autor
 
-Bruno Efos
+Anna Ageljić, Ivan Geto, Josip Baričić, Bruno Vig
 
 ## Licenca
 
